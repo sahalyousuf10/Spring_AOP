@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.sahal.spring.aop.spring_aop.SpringAopApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.499 s <<< FAILURE! - in com.sahal.spring.aop.spring_aop.SpringAopApplicationTests
+contextLoads  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'springAopApplication': Unsatisfied dependency expressed through field 'business1'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'business1': Unsatisfied dependency expressed through field 'dao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dao' defined in file [/Users/msahal/Downloads/spring_aop/target/classes/com/sahal/spring/aop/spring_aop/data/Dao.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'business1': Unsatisfied dependency expressed through field 'dao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dao' defined in file [/Users/msahal/Downloads/spring_aop/target/classes/com/sahal/spring/aop/spring_aop/data/Dao.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dao' defined in file [/Users/msahal/Downloads/spring_aop/target/classes/com/sahal/spring/aop/spring_aop/data/Dao.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+Caused by: java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+
